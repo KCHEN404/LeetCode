@@ -1,3 +1,12 @@
+/**
+ * 280. Wiggle Sort
+ * Related Topics: Array. Sort.
+ */
+
+/**
+ * Error prone:
+ * 1. input []
+ */
 class Solution {
     public void wiggleSort(int[] nums) {
         if (nums.length != 0) {
