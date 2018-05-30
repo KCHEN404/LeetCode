@@ -4,6 +4,10 @@
  */
 
 /**
+ * My accepted version
+ *  Time Complexity: O(nlogn)
+ * Space Complexity: O(1)
+ *
  * Error prone:
  * 1. input []
  */
@@ -56,6 +60,49 @@ class Solution {
         }
         if (right > index) {
             quicksort(nums, index, right);
+        }
+    }
+}
+
+/**
+ * Improved version
+ * Time Complexity: O(n)
+ * Space Complexity: O(1)
+ */
+class Solution {
+    public void wiggleSort(int[] nums) {
+        for (int i = 0; i < nums.length - 1; i++) {
+            if (i%2 == 0) {
+                if (nums[i] > nums[i+1]) {
+                    int tmp = nums[i];
+                    nums[i] = nums[i+1];
+                    nums[i+1] = tmp;
+                }
+            } else {
+                if (nums[i] < nums[i+1]) {
+                    int tmp = nums[i];
+                    nums[i] = nums[i+1];
+                    nums[i+1] = tmp; 
+                }
+            }
+        }
+    }
+}
+
+/**
+ * Improved version 2
+ * Time Complexity: O(n)
+ * Space Complexity: O(1)
+ */
+
+ class Solution {
+    public void wiggleSort(int[] nums) {
+        for (int i = 0; i < nums.length - 1; i++) {
+            if ((i%2 == 0) == (nums[i] > nums[i+1])) {
+                int tmp = nums[i];
+                nums[i] = nums[i+1];
+                nums[i+1] = tmp;
+            } 
         }
     }
 }
