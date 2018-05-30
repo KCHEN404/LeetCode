@@ -5,6 +5,9 @@
 
  /**
   * My accepted version
+  * Time Complexity: O(n)
+  * Space Complexity: O(n)
+  *
   * Error Prone:
   * 1. hashtable does not accept primitive type
   * 2. hashtable constructor: Hashtable<Type, Type> ht  =  new Hashtable<Type, Type>();
@@ -40,5 +43,28 @@ class Solution {
         } else {
             return true;
         }
+    }
+}
+
+ /**
+  * Improved version
+  * Time Complexity: O(n)
+  * Space Complexity: O(1)
+  * Basic Idea: char-int mapping
+  */
+
+  class Solution {
+    public boolean canPermutePalindrome(String s) {
+        int[] arr = new int[128];
+        for (int i = 0; i < s.length(); i++) {
+            arr[s.charAt(i)]++;
+        }
+        int count = 0;
+        for (int val: arr) {
+            if (val%2 != 0) {
+                count++;
+            }
+        }
+        return count <= 1;
     }
 }
