@@ -26,6 +26,9 @@ class Solution {
  * Basic Idea: Sorting
  * Time Complexity: O(nlogn)
  * Space Complexity: O(1)
+ *
+ * Error Prone:
+ * 1. Arrays.sort(arr);
  */
 
  class Solution {
@@ -43,3 +46,25 @@ class Solution {
     }
 }
 
+/**
+ * Other version 2
+ * Basic Idea: Hashing
+ * Time Complexity: O(n)
+ * Space Complexity: O(n)
+ *
+ * Error Prone:
+ * 1. Hashset: add()
+ * 2. Hashset: remove()
+ * 3. Hashset: iterator()
+ */
+class Solution {
+    public int singleNumber(int[] nums) {
+        HashSet<Integer> hs = new HashSet<Integer>();
+        for (int i = 0; i < nums.length; i++) {
+            if (! hs.add(nums[i])) {
+                hs.remove(nums[i]);
+            }
+        }
+        return hs.iterator().next();
+    }
+}
