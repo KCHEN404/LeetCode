@@ -42,3 +42,19 @@
 5. Perfect Hashing
     1. no collisions
     2. static dictionary
+    3. two-level hashing
+    4. dynamic perfect hashing allows insertion and deletion, very expensive though
+6. Cuckoo Hashing
+    1. alternative for dynamic perfect hashing
+    2. two tables with more than half of the table empty
+        1. if position in table 1 is taken, can either replace item in table 1 or take a look at table 2
+7. Hopscotch Hashing
+    1. The algorithm uses a single array of n buckets. For each bucket, its neighborhood is a small collection of nearby consecutive buckets (i.e. ones with close indices to the original hashed bucket).
+        1. If the entry i is empty, add x to i and return.
+        2. Starting at entry i, use a linear probe to find an empty entry at index j.
+        3. If the empty entry's index j is within H-1 of entry i, place x there and return. Otherwise, create an empty entry closer to i, find an item y whose hash value lies between i and j, but within H-1 of j. Displacing y to j creates a new empty slot closer to i. Repeat until the empty entry is within H-1 of entry i, place x there and return. If no such item y exists, or if the bucket i already contains H items, resize and rehash the table.
+8. Universal Hashing
+    1. Two properties
+        1. The hash function must be computable in constant time (i.e., independent of the number of items in the hash table
+        2. The hash function must distribute its items uniformly among the array slots.
+    2. The probability of a collision between any two distinct items is at most 1/M
