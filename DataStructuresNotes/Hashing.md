@@ -58,3 +58,5 @@
         1. The hash function must be computable in constant time (i.e., independent of the number of items in the hash table
         2. The hash function must distribute its items uniformly among the array slots.
     2. The probability of a collision between any two distinct items is at most 1/M
+9. Extensible Hashing
+    1. a type of hash system which treats a hash as a bit string, and uses a trie for bucket lookup. Because of the hierarchical nature of the system, re-hashing is an incremental operation (done one bucket at a time, as needed). This means that time-sensitive applications are less affected by table growth than by standard full-table rehashes.
