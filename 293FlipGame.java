@@ -38,3 +38,29 @@ class Solution {
         return result;
     }
 }
+
+/**
+ * Improved version
+ * Time Complexity: O(n^2)
+ * Space Complexity: O(n)
+ *
+ * Error Prone:
+ * 1. charAt is a constant time operation
+ * StringBuilder is faster than string "+"
+ */
+
+class Solution {
+    public List<String> generatePossibleNextMoves(String s) {
+        List<String> result = new ArrayList<String>();
+        for (int i = 0; i < s.length() - 1; i++) {
+            if (s.charAt(i) == '+' && s.charAt(i+1) == '+') {
+                StringBuilder res = new StringBuilder();
+                res.append(s.substring(0, i));
+                res.append("--");
+                res.append(s.substring(i + 2, s.length()));
+                result.add(res.toString());
+            }
+        }
+        return result;
+        }
+    }
