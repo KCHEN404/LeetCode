@@ -11,7 +11,11 @@
   * Space Complexity: O(k)?
   *
   * Error Prone:
-  * 1. 
+  * 1. iterator is O(1) space 
+  * 2. Iterator<Integer> iter = ...; need to cast (Integer) iter, if the
+  * iterator was initially declared as Iterator iter = ...;
+  * 3. iter.next();
+  * 4. iter.hasNext()
   */
 
 public class ZigzagIterator {
