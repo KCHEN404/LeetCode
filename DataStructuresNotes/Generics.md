@@ -12,3 +12,8 @@
         1. Box<Integer> integerBox = new Box<Integer>();
 3. Raw Types
     1. A raw type is the name of a generic class or interface without any type arguments.
+    2. Ex: Box rawBox = new Box();
+    3. Note: a non-generic class or interface type is not a raw type
+4. Generic Methods
+    1. Generic methods are methods that introduce their own type parameters
+5. Bounded Type Parameters
