@@ -17,3 +17,11 @@
 4. Generic Methods
     1. Generic methods are methods that introduce their own type parameters
 5. Bounded Type Parameters
+    1. to restrict the types that can be used as type arguments in a parameterized type
+        1. Ex: public <U extends Number> void inspect(U u)
+6. Multiple Bounds
+    1. <T extends B1 & B2 & B3>
+7. Generics, Inheritance, and Subtypes
+    1. Given two concrete types A and B (for example, Number and Integer), MyClass<A> has no relationship to MyClass<B>, regardless of whether or not A and B are related. The common parent of MyClass<A> and MyClass<B> is Object.
+    2. Generic Classes and Subtyping
+        1. ArrayList<E> implements List<E>, and List<E> extends Collection<E>. So ArrayList<String> is a subtype of List<String>, which is a subtype of Collection<String>. So long as you do not vary the type argument, the subtyping relationship is preserved between the types.
