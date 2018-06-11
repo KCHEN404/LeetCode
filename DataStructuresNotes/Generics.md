@@ -25,3 +25,9 @@
     1. Given two concrete types A and B (for example, Number and Integer), MyClass<A> has no relationship to MyClass<B>, regardless of whether or not A and B are related. The common parent of MyClass<A> and MyClass<B> is Object.
     2. Generic Classes and Subtyping
         1. ArrayList<E> implements List<E>, and List<E> extends Collection<E>. So ArrayList<String> is a subtype of List<String>, which is a subtype of Collection<String>. So long as you do not vary the type argument, the subtyping relationship is preserved between the types.
+8. Type Inference
+    1. You can replace the type arguments required to invoke the constructor of a generic class with an empty set of type parameters (<>) as long as the compiler can infer the type arguments from the context.
+    2. Target Types
+        1. The target type of an expression is the data type that the Java compiler expects depending on where the expression appears.
+9. Wildcards
+    1. the question mark (?), called the wildcard, represents an unknown type
