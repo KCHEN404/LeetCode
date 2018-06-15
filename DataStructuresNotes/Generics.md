@@ -30,7 +30,7 @@
     2. Target Types
         1. The target type of an expression is the data type that the Java compiler expects depending on where the expression appears.
 9. Wildcards
-    1. the question mark (?), called the wildcard, represents an unknown type
+    1. the question mark (?), called the wildcard, represents an unknown type 
     2. Upper Bounded Wildcards
         1. to relax the restrictions on a variable
             1. To declare an upper-bounded wildcard, use the wildcard character ('?'), followed by the extends keyword, followed by its upper bound. Note that, in this context, extends is used in a general sense to mean either "extends" (as in classes) or "implements" (as in interfaces).
