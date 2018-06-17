@@ -28,7 +28,7 @@
 8. Type Inference
     1. You can replace the type arguments required to invoke the constructor of a generic class with an empty set of type parameters (<>) as long as the compiler can infer the type arguments from the context.
     2. Target Types
-        1. The target type of an expression is the data type that the Java compiler expects depending on where the expression appears.
+        1. The target type of an expression is the data type that the Java compiler expects depending on where the expression appears. 
 9. Wildcards
     1. the question mark (?), called the wildcard, represents an unknown type 
     2. Upper Bounded Wildcards
