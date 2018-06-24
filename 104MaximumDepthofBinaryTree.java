@@ -5,7 +5,7 @@
 
  /**
   * My accepted version
-  *
+  * 
   * Time Complexity: O(n)
   * Space Complexity: O(1)
   *
