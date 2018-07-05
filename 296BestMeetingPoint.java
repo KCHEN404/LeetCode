@@ -1,14 +1,15 @@
 /**
  * 296. Best Meeting Point
- * Related Topics: Tree
+ * Related Topics: Math. Sort
  */
 
  /**
-  * My accepted version
+  * Accepted version 1
   *  
-  * Time Complexity: O(n)
-  * Space Complexity: O(1)
+  * Time Complexity: O(mn)
+  * Space Complexity: O(mn)
   *
+  * Basic idea: collect points in order, find median
   */
 
 class Solution {
