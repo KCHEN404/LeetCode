@@ -1,7 +1,7 @@
 /**
  * 22. Generate Parentheses
  * Related Topics: String, backtracking
- */ 
+ */  
 
  /**
   * Accepted version
