@@ -16,7 +16,9 @@
   */
 
 class Solution {
-    String[][] mapping = {{"a","b","c"}, {"d","e","f"}, {"g","h","i"}, {"j","k","l"}, {"m","n","o"}, {"p","q","r","s"}, {"t","u","v"},          {"w","x","y","z"}};
+    String[][] mapping = {{"a","b","c"}, {"d","e","f"}, {"g","h","i"},
+    {"j","k","l"}, {"m","n","o"}, {"p","q","r","s"}, {"t","u","v"},
+    {"w","x","y","z"}};
     
     public List<String> letterCombinations(String digits) {
         List<String> res = new ArrayList<>();
@@ -32,7 +34,8 @@ class Solution {
             res.add(comb);
             return;
         }
-        int num = Integer.parseInt(digits.substring(comb.length(), comb.length()+1));
+        int num = Integer.parseInt(digits.substring(comb.length(),
+            comb.length()+1));
         for(String letter: mapping[num-2]) {
             backtracking(res, digits, comb+letter);
         }
